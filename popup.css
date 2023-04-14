@@ -1,18 +1,28 @@
 body {
     font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     margin: 0;
     padding: 0;
   }
+
+  #buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  #timer-wrapper {
+    text-align: center;
+    margin: 40px 20px;
+  }
   
   h1 {
-    text-align: center;
     margin: 20px 0;
   }
   
   #timer {
-    text-align: center;
-    font-size: 48px;
+    font-size: 72px;
     margin: 20px 0;
   }
   
@@ -28,6 +38,7 @@ body {
     margin: 20px 10px;
     border-radius: 5px;
     cursor: pointer;
+    vertical-align: middle;
   }
   
   button:hover {
@@ -37,5 +48,9 @@ body {
   button[disabled] {
     background-color: #ccc;
     cursor: not-allowed;
+  }
+  
+  #pause-button {
+    display: none;
   }
   

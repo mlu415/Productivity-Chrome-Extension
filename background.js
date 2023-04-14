@@ -4,6 +4,8 @@ chrome.commands.onCommand.addListener((command) => {
     startTimer();
   } else if (command === "stop-timer") {
     stopTimer();
+  } else if (command === "pause-timer") {
+    pauseTimer();
   }
 });
 
