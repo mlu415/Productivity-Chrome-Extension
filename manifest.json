@@ -1,0 +1,18 @@
+{
+  "name": "Productivity Extension",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "A chrome extension for work and study sessions, along with breaks",
+  "icons": {
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "popup.html"
+  }
+}
