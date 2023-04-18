@@ -2,6 +2,9 @@ const timerDiv = document.getElementById("timer");
 const startButton = document.getElementById("start-button");
 const stopButton = document.getElementById("stop-button");
 const pauseButton = document.getElementById("pause-button");
+const setTimerButton = document.getElementById("set-button");
+const timerSlider = document.getElementById("timer-slider");
+const sliderValue = document.getElementById("slider-value");
 
 startButton.addEventListener("click", () => {
   startTimer();
@@ -13,6 +16,14 @@ stopButton.addEventListener("click", () => {
 
 pauseButton.addEventListener("click", () => {
   pauseTimer();
+});
+
+setTimerButton.addEventListener("click", () => {
+  setTimer(parseInt(timerSlider.value) * 60);
+});
+
+timerSlider.addEventListener("input", () => {
+  updateSliderValue();
 });
 
 function updateTimerDisplay() {
@@ -84,4 +95,15 @@ function pauseTimer() {
   pauseButton.disabled = true;
 }
 
+function setTimer(x) {
+  timerValue = x;
+  updateTimerDisplay();
+}
+
+function updateSliderValue() {
+  valueMinutes = parseInt(timerSlider.value);
+  sliderValue.textContent = `${valueMinutes} minute${
+    valueMinutes !== 1 ? "s" : ""
+  }`;
+}
 updateTimerDisplay();
